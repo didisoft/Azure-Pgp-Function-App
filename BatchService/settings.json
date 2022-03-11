@@ -1,0 +1,7 @@
+{
+  "poolTargetNodeCount": 1,
+  "poolNodeVirtualMachineSize": "standard_d1_v2",
+  "poolOSFamily": "5",
+  "poolId": "DidiSoft-Batch-Pool",
+  "shouldDeleteJob":  true
+}
