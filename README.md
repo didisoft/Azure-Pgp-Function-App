@@ -4,10 +4,10 @@ This repo contains four projects that demonstrate how to spawn an Azure Batch se
 
 Projecfts in this Solition (You will need Visua Studio 2019 or Raider):
 
-  - BatchService - illusrtative Batch Service 
-  - EncryptBlobPgp - standalone EXE that performs the encryption
-  - DidiSoftBlobFunction - starts a Batch Service that invokes EncryptBlobPgp
-  - DidiSoftBlobDeleteFunction - stops the Batch Service
+  - **BatchService** - illusrtative Batch Service 
+  - **EncryptBlobPgp** - standalone EXE that performs the encryption
+  - **DidiSoftBlobFunction** - starts a Batch Service that invokes EncryptBlobPgp
+  - **DidiSoftBlobDeleteFunction** - stops the Batch Service
 
 # Publisng in Azure!
 
@@ -18,7 +18,7 @@ Projecfts in this Solition (You will need Visua Studio 2019 or Raider):
   
 You may also need the [DidiSoft.Pgp] assembly.
 
-A Tutorial for these projects is avalable at [Gulp]
+A Tutorial for these projects is avalable at [DidiSoft Web Site](https://didisoft.com/net-openpgp/examples/pgp-in-azure-batch-service/)
 
 License
 ----
@@ -27,5 +27,5 @@ MIT
    [DidiSoft.Pgp]: <https://www.nuget.org/packages/DidiSoft.Pgp.Trial/>
    [df1]: <https://didisoft.com/>
    [AngularJS]: <http://angularjs.org>
-   [Gulp]: <https://didisoft.com/net-openpgp/examples/pgp-in-azure-batch-service/>
+   [Gulp]: <>
 
