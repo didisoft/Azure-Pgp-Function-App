@@ -1,3 +1,14 @@
+///////////////////////////////////////////////////////////////////
+//
+//  Example Azure BlobTrigger that starts a Batch Service
+//
+//  The Batch Service executes EncryptBlobPgp, which will PGP encrypt
+//  "data/{name}" into "data/{name}.pgp"
+//
+//  (c) DidiSoft Inc, 2022 
+//  https://didisoft.com/
+//
+///////////////////////////////////////////////////////////////////
 using System;
 using System.IO;
 using System.Collections.Generic;

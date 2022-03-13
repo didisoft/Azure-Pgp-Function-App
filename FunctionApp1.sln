@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DidisoftBlobFunction", "FunctionApp1\DidisoftBlobFunction.csproj", "{FEE291F2-F3ED-4879-9527-5CB1493FD488}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BatchService", "BatchService\BatchService.csproj", "{01E40A9D-D86F-4CB0-A693-420CFB2B1692}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EncryptBlobPgp", "EncryptBlobPgp\EncryptBlobPgp.csproj", "{51D691FE-037C-463D-9DFA-C8BCADD56837}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DidiSoftBlobDeleteFunction", "DidiSoftBlobDeleteFunction\DidiSoftBlobDeleteFunction.csproj", "{28BA39A1-A036-408F-A752-D2AB9E2EFDFF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DidiSoftBlobDeleteFunction", "DidiSoftBlobDeleteFunction\DidiSoftBlobDeleteFunction.csproj", "{28BA39A1-A036-408F-A752-D2AB9E2EFDFF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DidisoftBlobFunction", "DidiSoftBlobFunction\DidisoftBlobFunction.csproj", "{4952BFCA-DE74-477A-931D-1D90EBD2F319}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{FEE291F2-F3ED-4879-9527-5CB1493FD488}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FEE291F2-F3ED-4879-9527-5CB1493FD488}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FEE291F2-F3ED-4879-9527-5CB1493FD488}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FEE291F2-F3ED-4879-9527-5CB1493FD488}.Release|Any CPU.Build.0 = Release|Any CPU
 		{01E40A9D-D86F-4CB0-A693-420CFB2B1692}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{01E40A9D-D86F-4CB0-A693-420CFB2B1692}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{01E40A9D-D86F-4CB0-A693-420CFB2B1692}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -33,6 +29,10 @@ Global
 		{28BA39A1-A036-408F-A752-D2AB9E2EFDFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{28BA39A1-A036-408F-A752-D2AB9E2EFDFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{28BA39A1-A036-408F-A752-D2AB9E2EFDFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4952BFCA-DE74-477A-931D-1D90EBD2F319}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4952BFCA-DE74-477A-931D-1D90EBD2F319}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4952BFCA-DE74-477A-931D-1D90EBD2F319}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4952BFCA-DE74-477A-931D-1D90EBD2F319}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

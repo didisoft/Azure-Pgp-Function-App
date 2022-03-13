@@ -1,5 +1,11 @@
-//Copyright (c) Microsoft Corporation
-
+///////////////////////////////////////////////////////////////////
+//
+//  Azure Batch Service that invokes EncryptBlobPgp
+//
+//  (c) DidiSoft Inc, 2022 
+//  https://didisoft.com/
+//
+///////////////////////////////////////////////////////////////////
 namespace DidiSoft.Batch.Samples.BatchService
 {
     using System;

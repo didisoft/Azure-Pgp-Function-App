@@ -18,6 +18,8 @@ Projecfts in this Solition (You will need Visua Studio 2019 or Raider):
   
 You may also need the [DidiSoft.Pgp] assembly.
 
+A Tutorial for these projects is avalable at [Gulp]
+
 License
 ----
 MIT
@@ -25,5 +27,5 @@ MIT
    [DidiSoft.Pgp]: <https://www.nuget.org/packages/DidiSoft.Pgp.Trial/>
    [df1]: <https://didisoft.com/>
    [AngularJS]: <http://angularjs.org>
-   [Gulp]: <http://gulpjs.com>
+   [Gulp]: <https://didisoft.com/net-openpgp/examples/pgp-in-azure-batch-service/>
 

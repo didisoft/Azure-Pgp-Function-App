@@ -6,11 +6,26 @@ using Microsoft.Azure.Storage.Blob;
 
 using DidiSoft.Pgp;
 
+///////////////////////////////////////////////////////////////////
+//
+//  Example code for PGP encrypting a blob from Azure Storage Container
+//
+//  (c) DidiSoft Inc, 2022 
+//  https://didisoft.com/
+//
+///////////////////////////////////////////////////////////////////
 namespace EncryptBlob
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main(string[] a)
+        {
+
+            PGPLib pgp = new PGPLib();
+            pgp.EncryptString("AA", @"c:\temp\download\pgpkey.txt");
+        }
+
+        static void Main2(string[] args)
         {
             if (args.Length != 4)
             {

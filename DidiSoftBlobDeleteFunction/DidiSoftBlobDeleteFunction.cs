@@ -7,6 +7,16 @@ using Microsoft.Extensions.Logging;
 
 using Microsoft.Extensions.Configuration;
 
+///////////////////////////////////////////////////////////////////
+//
+//  Example Azure BlobTrigger that ends a Batch Service
+//
+//  started by DidiSoftBlobFunction
+//
+//  (c) DidiSoft Inc, 2022 
+//  https://didisoft.com/
+//
+///////////////////////////////////////////////////////////////////
 namespace DidiSoftBlobDeleteFunction
 {
     public static class DidiSoftBlobDeleteFunction
