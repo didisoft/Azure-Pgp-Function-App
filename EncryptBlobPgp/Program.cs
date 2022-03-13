@@ -18,14 +18,7 @@ namespace EncryptBlob
 {
     class Program
     {
-        static void Main(string[] a)
-        {
-
-            PGPLib pgp = new PGPLib();
-            pgp.EncryptString("AA", @"c:\temp\download\pgpkey.txt");
-        }
-
-        static void Main2(string[] args)
+        public static void Main(string[] args)
         {
             if (args.Length != 4)
             {
@@ -40,9 +33,6 @@ namespace EncryptBlob
 
             string connectionString = "DefaultEndpointsProtocol=https;AccountName=didisoftstorage1;AccountKey=fIU8h2WHbCiP9zsz2UqBWu1N9Da3kVaE3hWkSM5eeBr1db9CwWx8haUD/5LC/cwwHdvCQ9Qp7mrg+AStrjIVeg==;EndpointSuffix=core.windows.net";
             CloudStorageAccount cloudStorageAccount = CloudStorageAccount.Parse(connectionString);
-            //string storageAccount = "didisoftstorage1";
-            //string storageKey = "fIU8h2WHbCiP9zsz2UqBWu1N9Da3kVaE3hWkSM5eeBr1db9CwWx8haUD";
-            //new CloudStorageAccount(storageCredentials, useHttps: true);
 
             CloudBlobClient blobClient = cloudStorageAccount.CreateCloudBlobClient();
 
