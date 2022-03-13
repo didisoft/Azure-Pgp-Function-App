@@ -1,8 +1,8 @@
 # DidiSoft Azure Functons running PGP encryption
 
-This repo contains four projects that demonstrate how to spawn an Azure Batch service from a BrobTrigger that listens for new blobs in an Azure Blob Storage container. The Batch Service encrypts the input Blob into another container. A separate Blob Function listens for the encrypted Blobs and then stops the Batch Service.
+This repo contains four projects that demonstrate how to spawn an Azure Batch service from a BrobTrigger that listens for new blobs in an Azure Blob Storage container. The Batch Service OpenPGP encrypts the input Blob into another container. A separate Blob Function listens for the encrypted Blobs and then stops the Batch Service.
 
-Projecfts in this Solition (You will need Visua Studio 2019 or Raider):
+Projects in this Solition (You will need Visual Studio 2019 or Raider):
 
   - **BatchService** - illusrtative Batch Service 
   - **EncryptBlobPgp** - standalone EXE that performs the encryption
