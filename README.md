@@ -5,7 +5,7 @@ This repo contains four projects that demonstrate how to spawn an Azure Batch se
 Projects in this Solition (You will need Visual Studio 2019 or Raider):
 
   - **BatchService** - illusrtative Batch Service 
-  - **EncryptBlobPgp** - standalone EXE that performs the encryption
+  - **EncryptBlobPgp** - standalone EXE that performs the encryption of Azure Blob fields, keys taken from Key Vault
   - **DidiSoftBlobFunction** - starts a Batch Service that invokes EncryptBlobPgp
   - **DidiSoftBlobDeleteFunction** - stops the Batch Service
 
