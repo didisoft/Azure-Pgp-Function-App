@@ -56,7 +56,7 @@ namespace EncryptBlob
                 string tenant = "didisoft";
                 string clientId = "didisoftcl1";
                 string clientSecret = "CiP9zsz2UqBWu1N9Da3kVaE3hWkSM5eeBr1db9CwWx";
-                KeysAzureVault vault = new KeysAzureVault(vaultName, tenant, clientId, clientSecret);
+                VaultKeyStorage vault = new VaultKeyStorage(vaultName, tenant, clientId, clientSecret);
                 string publicKey = vault.GetPublicKey("recipient@acmcompany.com");
 
                 bool asciiArmorOutput = false;

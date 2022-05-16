@@ -15,7 +15,15 @@ namespace EncryptBlob
     /// <remarks>
     /// Copyright (c) DidiSoft Inc 2022 / didisoft.com
     /// </remarks>
-    public class KeysAzureVault
+    /// <example>
+    /// Example usage of KeysAzureVault
+    /// <code lang="C#">
+    /// VaultKeyStorage storage = new VaultKeyStorage();
+    /// string publicKey = vault.GetPublicKey("recipient@acmcompany.com");
+    /// ... use publicKey with DidiSoft.Pgp.PGPLib
+    /// </code>
+    /// </example>
+    public class VaultKeyStorage
     {
         private string privateKeyId = "pgp_private_key"; // 
         private string keyVaultName;
@@ -28,7 +36,7 @@ namespace EncryptBlob
         /// <param name="tenantId">tenant Id</param>
         /// <param name="clientId">client Id</param>
         /// <param name="clientSecret">client secret</param>
-        public KeysAzureVault(string vault, string tenantId, string clientId, string clientSecret)
+        public VaultKeyStorage(string vault, string tenantId, string clientId, string clientSecret)
         {
             this.keyVaultName = vault;
             this.tenantId = tenantId;
@@ -41,6 +49,14 @@ namespace EncryptBlob
         /// </summary>
         /// <param name="recipient">Recipient identifier</param>
         /// <returns>Public key in ASCII armored format</returns>
+        /// <example>
+        /// Example usage of KeysAzureVault
+        /// <code lang="C#">
+        /// VaultKeyStorage storage = new VaultKeyStorage();
+        /// string publicKey = vault.GetPublicKey("recipient@acmcompany.com");
+        /// ... use publicKey with DidiSoft.Pgp.PGPLib
+        /// </code>
+        /// </example>
         public string GetPublicKey(string recipient)
         {
             return Task.Run(() => GetPublicKeyAsync(recipient)).GetAwaiter().GetResult();
@@ -188,6 +204,63 @@ namespace EncryptBlob
                 throw new DidiSoft.Pgp.Exceptions.WrongPrivateKeyException("No privata key in supplied source");
 
             await GetClient().SetSecretAsync(this.privateKeyId, keyPair.ExportPrivateKeyAsString());
+        }
+
+        /// <summary>
+        /// Deletes PGP private key from Azure Key Vault
+        /// </summary>
+        /// <remarks>
+        /// This method is designed with the presumption that we have only one private key
+        /// <br></br>
+        /// In case we have more tha one private key, then it has to be modified like <see cref="SavePublicKeyAsync(string, string)"/>
+        /// </remarks>
+        public void DeletePrivateKey()
+        {
+            var operation = GetClient().GetDeletedSecret(privateKeyId);
+        }
+
+        /// <summary>
+        /// Deletes PGP private key from Azure Key Vault
+        /// </summary>
+        /// <remarks>
+        /// This method is designed with the presumption that we have only one private key
+        /// <br></br>
+        /// In case we have more tha one private key, then it has to be modified like <see cref="SavePublicKeyAsync(string, string)"/>
+        /// </remarks>
+        public async void DeletePrivateKeyAsync()
+        {
+            DeleteSecretOperation operation = await GetClient().StartDeleteSecretAsync(this.privateKeyId);
+            await operation.WaitForCompletionAsync();
+        }
+
+
+        /// <summary>
+        /// Deletes PGP private key from Azure Key Vault
+        /// </summary>
+        /// <remarks>
+        /// This method is designed with the presumption that we have only one private key
+        /// <br></br>
+        /// In case we have more tha one private key, then it has to be modified like <see cref="SavePublicKeyAsync(string, string)"/>
+        /// </remarks>
+        /// <param name="recipientId">Name associated with the public key</param>
+        public void DeletePublicKey(string recipientId)
+        {
+            var operation = GetClient().GetDeletedSecret(recipientId);
+        }
+
+        /// <summary>
+        /// Deletes PGP private key from Azure Key Vault
+        /// </summary>
+        /// <remarks>
+        /// This method is designed with the presumption that we have only one private key
+        /// <br></br>
+        /// In case we have more tha one private key, then it has to be modified like <see cref="SavePublicKeyAsync(string, string)"/>
+        /// </remarks>
+        /// <param name="recipientId">Name associated with the public key</param>
+        public async void DeletePublicKeyAsync(string recipientId)
+        {
+            DeleteSecretOperation operation = await GetClient().StartDeleteSecretAsync(recipientId);
+            await operation.WaitForCompletionAsync();
         }
 
         #region Helpers
